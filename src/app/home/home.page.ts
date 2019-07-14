@@ -7,6 +7,24 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  routeLists: RouteLists[] = [
+    {
+      icon: 'locate',
+      name: 'Mapa',
+      redirectTo: '/map'
+    },
+    {
+      icon: 'map',
+      name: 'Cargar GPX',
+      redirectTo: '/load-route'
+    }
+  ];
   constructor() {}
 
+}
+
+interface RouteLists {
+  icon: string;
+  name: string;
+  redirectTo: string;
 }
